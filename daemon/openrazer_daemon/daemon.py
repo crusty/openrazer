@@ -92,9 +92,10 @@ class RazerDaemon(DBusService):
 
         # Check for plugdev group
         if not self._check_plugdev_group():
-            self.logger.critical("User is not a member of the plugdev group")
-            self.logger.critical("Please run the command 'sudo gpasswd -a $USER plugdev' and then reboot!")
-            sys.exit(1)
+            pass
+            # self.logger.critical("User is not a member of the plugdev group")
+            # self.logger.critical("Please run the command 'sudo gpasswd -a $USER plugdev' and then reboot!")
+            # sys.exit(1)
 
         # Setup DBus to use gobject main loop
         dbus.mainloop.glib.threads_init()
