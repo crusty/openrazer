@@ -1081,6 +1081,32 @@ class RazerNagaProWired(__RazerDeviceBrightnessSuspend):
     DEVICE_IMAGE = "https://hybrismediaprod.blob.core.windows.net/sys-master-phoenix-images-container/hfd/ha6/9080569528350/razer-naga-pro-500x500.png"
 
 
+class RazerNagaProV2Wired(__RazerDeviceBrightnessSuspend):
+    """
+    Class for the Razer Naga Pro V2 (Wired)
+    """
+    USB_VID = 0x1532
+    USB_PID = 0x00A7
+    DPI_MAX = 30000
+    HAS_MATRIX = True
+    WAVE_DIRS = (1, 2)
+    MATRIX_DIMS = [1, 3]
+
+    DEDICATED_MACRO_KEYS = True
+    METHODS = ['get_device_type_mouse', 'max_dpi', 'get_dpi_xy', 'set_dpi_xy', 'get_poll_rate', 'set_poll_rate', 'get_dpi_stages', 'set_dpi_stages',
+               # Macros
+               'get_macros', 'delete_macro', 'add_macro',
+               # Battery
+               'get_battery', 'is_charging', 'get_idle_time', 'set_idle_time', 'get_low_battery_threshold', 'set_low_battery_threshold',
+               # Logo
+               'get_logo_brightness', 'set_logo_brightness',
+               'set_logo_wave', 'set_logo_static_naga_hex_v2', 'set_logo_spectrum_naga_hex_v2', 'set_logo_none_naga_hex_v2', 'set_logo_reactive_naga_hex_v2', 'set_logo_breath_random_naga_hex_v2', 'set_logo_breath_single_naga_hex_v2', 'set_logo_breath_dual_naga_hex_v2',
+               # Custom frame
+               'set_custom_effect', 'set_key_row']
+
+    DEVICE_IMAGE = "https://content.hwigroup.net/images/products_1920x1080/648064/razer-naga-v2-pro-wireless-black.jpg"
+
+
 class RazerNagaProWireless(RazerNagaProWired):
     """
     Class for the Razer Naga Pro (Wireless)
